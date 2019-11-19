@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="Extremely barebones web UI to format pasted Excel row/column data into lists">
+        <title>Excel Data Formatter</title>
+
+        <style>
+            .noscript {
+                font-size: 22px;
+                color: red;
+                padding: 1rem;
+            }
+
+            button {
+                font-size: 22px;
+                align-self: center;
+                margin-right: 1rem;
+                padding: 0.5rem;
+            }
+
+            p {
+                font-size: 24px;
+                font-family: Helvetica, sans-serif;
+                padding-right: 1rem;
+            }
+
+            main, header {
+                display: flex;
+            }
+
+            textarea {
+                height: 100vh;
+                width: 50vw;
+            }
+        </style>
+    </head>
+    <body>
+        <noscript class="noscript">
+            You must enable JavaScript to use this application.
+        </noscript>
+
+        <header>
+            <button>
+                Submit
+            </button>
+            <p>
+                Paste data from Excel rows/columns to flatten into a list.
+            </p>
+        </header>
+
+        <main>
+            <textarea id="input" placeholder="Paste Excel data here"></textarea>
+            <textarea id="output" placeholder="Output will appear here"></textarea>
+        </main>
+
+        <script type="text/javascript">
+            var COLUMN_ROW_SPLIT_REGEX = /[	\n]+/;
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var button = document.querySelector('button');
+                var input = document.getElementById('input');
+                var output = document.getElementById('output')
+
+                button.addEventListener('click', function () {
+                    var textArray = input.value.split(COLUMN_ROW_SPLIT_REGEX);
+                    output.value = textArray;
+                });
+            });
+        </script>
+    </body>
+</html>

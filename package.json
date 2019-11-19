@@ -1,0 +1,20 @@
+{
+  "name": "@intouchgroup/excel-data-formatter",
+  "version": "1.0.0",
+  "description": "Extremely barebones web UI to format pasted Excel row/column data into lists",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intouchgroup/excel-data-formatter.git"
+  },
+  "keywords": [
+    "excel",
+    "data",
+    "format"
+  ],
+  "author": "Intouch Group",
+  "license": "MIT"
+}
