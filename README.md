@@ -1,7 +1,7 @@
 ## @intouchgroup/excel-data-formatter
 
-Web UI to format pasted Excel data
+Extremely barebones web UI to format pasted Excel row/column data into lists
 
 ### Usage
 
-Visit PLACEHOLDER
+Visit https://excel-data-formatter.surge.sh/
